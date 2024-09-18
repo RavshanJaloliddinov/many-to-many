@@ -8,7 +8,6 @@ class UserController {
 
     createUser = async (req, res) => {
         try {
-            console.log(req.body)
             const newUser = await this.#userModel.create(req.body);
 
             res.status(201).send({
